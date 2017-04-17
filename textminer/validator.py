@@ -26,11 +26,11 @@ def phone_number(string_input):
 
 
 def money(string_input):
-    return len(re.findall(r'^[$](([0-9]{1,3})|([0-9]{1,3},?[0-9]{3})|([0-9]{1,3},?[0-9]{3},?[0-9]{3}))([.][0-9]{2})?$', string_input)) >= 1
+    return len(re.findall(r'^[$][0-9]{1,3}(,?[0-9]{3})*([.][0-9]{2})?$', string_input)) >= 1
 
 
 def zipcode(string_input):
-    return len(re.findall(r'^[0-9]{5}$|([0-9]{5}-[0-9]{4}$)', string_input)) == 1
+    return len(re.findall(r'^[0-9]{5}(-[0-9]{4})?$', string_input)) == 1
 
 
 def date(string_input):
